@@ -9,6 +9,7 @@
     border: none; 
     color: #fff;
 }
+
 body{
     background: #0f0a0a;
     height: 100vh;
@@ -292,10 +293,10 @@ section{
 i:hover::after{
     top: 0;
 }
-.home img{
+/* .home img{
     width: 30vw;
     height: 30vw;
-    margin-left: 5rem; /* Add margin to move image right */
+    margin-left: 5rem; 
     background: rgba(255,255,255,.1);
     border: .2rem solid rgba(255,255,255,.3);
     border-radius: 50%;
@@ -303,7 +304,34 @@ i:hover::after{
     animation: Scale 1s ease forwards;
     scale: 0;
     animation-delay: 2s;
+} */
+.home img {
+    width: 30vw;
+    height: 30vw;
+    margin-left: 5rem;
+    margin-top: 2rem; /* Add some space from the top */
+    background: rgba(97, 51, 51, 0.1);
+    border: 0.2rem solid rgba(255,255,255,0.3);
+    border-radius: 50%;
+    filter: drop-shadow(0 0 8rem #0088ff);
+    animation: Scale 1s ease forwards;
+    scale: 0;
+    animation-delay: 2s;
 }
+
+/* Mobile view adjustments */
+@media (max-width: 768px) {
+    .home img {
+        width: 500vw;
+        height: 60vw;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 35%;
+        margin-top: 18rem; /* More spacing from the top */
+        display: block; /* Center image horizontally */
+    }
+}
+
 @keyframes Scale{
     0%{
         scale: 0;
@@ -805,6 +833,7 @@ footer i{
 }
 .project-box {
     background-color: #161b22;
+    
     padding: 20px;
     border-radius: 10px;
     transition: transform 0.3s ease;
@@ -829,7 +858,10 @@ footer i{
     border-radius: 5px;
     text-decoration: none;
     transition: background-color 0.3s ease;
+    background-image: url(background.avif);
 }
 .project-box .btn:hover {
     background-color: #2ea043;
+    background-image: url(background.avif);
+    
 }
